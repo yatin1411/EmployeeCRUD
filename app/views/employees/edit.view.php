@@ -29,7 +29,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-success btn-custom w-100 mb-2">Update Employee</button>
-                    <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=employees" class="btn btn-secondary btn-custom w-100">Cancel</a>
+                    <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees" class="btn btn-secondary btn-custom w-100">Cancel</a>
                 </form>
             </div>
         </div>

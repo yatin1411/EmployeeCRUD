@@ -22,7 +22,7 @@
     // Redirect to page
     function redirect($page) {
         $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-        $base = $_SERVER['HTTP_HOST'] . (defined('APP_BASE_PATH') ? APP_BASE_PATH : '/Mvc/public/index.php');
+        $base = $_SERVER['HTTP_HOST'] . (defined('APP_BASE_PATH') ? APP_BASE_PATH : '/EmployeeCRUD/public/index.php');
         $url = $scheme . '://' . $base . '?url=' . $page;
         header('Location: ' . $url, true, 302);
         exit;

@@ -13,7 +13,7 @@
                     <input type="hidden" name="url" value="employees/search">
                     <input type="text" class="form-control" name="keyword" placeholder="Search by name, email, position..." value="<?php echo htmlspecialchars($keyword); ?>">
                     <button class="btn btn-primary btn-custom" type="submit">Search</button>
-                    <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=employees/search" class="btn btn-secondary btn-custom">Clear</a>
+                    <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/search" class="btn btn-secondary btn-custom">Clear</a>
                 </form>
             </div>
         </div>
@@ -46,8 +46,8 @@
                                     <td><?php echo htmlspecialchars($employee['position']); ?></td>
                                     <td><?php echo number_format($employee['salary'], 2); ?></td>
                                     <td>
-                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=employees/edit&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-primary btn-custom">Edit</a>
-                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=employees/delete&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-danger btn-custom" onclick="return confirm('Are you sure?')">Delete</a>
+                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/edit&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-primary btn-custom">Edit</a>
+                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/delete&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-danger btn-custom" onclick="return confirm('Are you sure?')">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

@@ -60,20 +60,20 @@
         }
         
         .container {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(245, 247, 250, 0.95);
             border-radius: 16px;
             padding: 50px;
             margin-top: 30px;
             margin-bottom: 30px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(245, 247, 250, 0.8);
             max-width: 1200px;
         }
         
         .card {
             border: 1px solid #e8f0ff;
             border-radius: 12px;
-            background: #ffffff;
+            background: #f8f9fa;
             box-shadow: 0 4px 16px rgba(26, 54, 93, 0.08);
         }
         
@@ -173,7 +173,7 @@
         .table {
             border-radius: 10px;
             overflow: hidden;
-            background-color: #ffffff;
+            background-color: #f8f9fa;
             margin-bottom: 0;
         }
         
@@ -261,7 +261,7 @@
             border: 2px solid #e8f0ff;
             padding: 12px 16px;
             font-size: 0.95rem;
-            background-color: #ffffff;
+            background-color: #f8f9fa;
             color: #2d3748;
         }
         
@@ -272,7 +272,7 @@
         .form-control:focus, .form-select:focus {
             border-color: #2c5282;
             box-shadow: 0 0 0 4px rgba(44, 82, 130, 0.1);
-            background-color: #ffffff;
+            background-color: #f8f9fa;
             color: #2d3748;
         }
         
@@ -305,7 +305,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container-fluid px-4">
-            <a class="navbar-brand" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php">
+            <a class="navbar-brand" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php">
                 <i class="bi bi-briefcase-fill"></i> EMS
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -315,18 +315,18 @@
                 <ul class="navbar-nav ms-auto">
                     <?php if (isLoggedIn()): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=auth/logout">
+                            <a class="nav-link" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=auth/logout">
                                 Logout
                             </a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=auth/login">
+                            <a class="nav-link" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=auth/login">
                                 Login
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=auth/register">
+                            <a class="nav-link" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=auth/register">
                                 Register
                             </a>
                         </li>

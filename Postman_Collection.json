@@ -24,10 +24,10 @@
               "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\"\n}"
             },
             "url": {
-              "raw": "http://localhost/Mvc/public/index.php?url=api/login",
+              "raw": "http://localhost/EmployeeCrud/public/index.php?url=api/login",
               "protocol": "http",
               "host": ["localhost"],
-              "path": ["Mvc", "public", "index.php"],
+              "path": ["EmployeeCrud", "public", "index.php"],
               "query": [
                 {
                   "key": "url",
@@ -48,10 +48,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost/Mvc/public/index.php?url=api/employees",
+              "raw": "http://localhost/EmployeeCrud/public/index.php?url=api/employees",
               "protocol": "http",
               "host": ["localhost"],
-              "path": ["Mvc", "public", "index.php"],
+              "path": ["EmployeeCrud", "public", "index.php"],
               "query": [
                 {
                   "key": "url",
@@ -67,10 +67,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost/Mvc/public/index.php?url=api/getEmployee&id=1",
+              "raw": "http://localhost/EmployeeCrud/public/index.php?url=api/getEmployee&id=1",
               "protocol": "http",
               "host": ["localhost"],
-              "path": ["Mvc", "public", "index.php"],
+              "path": ["EmployeeCrud", "public", "index.php"],
               "query": [
                 {
                   "key": "url",
@@ -99,10 +99,10 @@
               "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"position\": \"Manager\",\n  \"salary\": 50000\n}"
             },
             "url": {
-              "raw": "http://localhost/Mvc/public/index.php?url=api/addEmployee",
+              "raw": "http://localhost/EmployeeCrud/public/index.php?url=api/addEmployee",
               "protocol": "http",
               "host": ["localhost"],
-              "path": ["Mvc", "public", "index.php"],
+              "path": ["EmployeeCrud", "public", "index.php"],
               "query": [
                 {
                   "key": "url",
@@ -127,10 +127,10 @@
               "raw": "{\n  \"id\": 1,\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@example.com\",\n  \"position\": \"Senior Manager\",\n  \"salary\": 60000\n}"
             },
             "url": {
-              "raw": "http://localhost/Mvc/public/index.php?url=api/updateEmployee",
+              "raw": "http://localhost/EmployeeCrud/public/index.php?url=api/updateEmployee",
               "protocol": "http",
               "host": ["localhost"],
-              "path": ["Mvc", "public", "index.php"],
+              "path": ["EmployeeCrud", "public", "index.php"],
               "query": [
                 {
                   "key": "url",
@@ -155,10 +155,10 @@
               "raw": "{\n  \"id\": 1\n}"
             },
             "url": {
-              "raw": "http://localhost/Mvc/public/index.php?url=api/deleteEmployee",
+              "raw": "http://localhost/EmployeeCrud/public/index.php?url=api/deleteEmployee",
               "protocol": "http",
               "host": ["localhost"],
-              "path": ["Mvc", "public", "index.php"],
+              "path": ["EmployeeCrud", "public", "index.php"],
               "query": [
                 {
                   "key": "url",
@@ -174,10 +174,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost/Mvc/public/index.php?url=api/search&keyword=John",
+              "raw": "http://localhost/EmployeeCrud/public/index.php?url=api/search&keyword=John",
               "protocol": "http",
               "host": ["localhost"],
-              "path": ["Mvc", "public", "index.php"],
+              "path": ["EmployeeCrud", "public", "index.php"],
               "query": [
                 {
                   "key": "url",

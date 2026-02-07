@@ -33,7 +33,7 @@
                 </form>
 
                 <hr style="border-color: #e8f0ff;">
-                <p class="text-center" style="color: #718096; margin-bottom: 0; margin-top: 1.5rem;">Already have an account? <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Mvc/public/index.php?url=auth/login" class="text-decoration-none" style="color: #2c5282; font-weight: 700;">Sign in</a></p>
+                <p class="text-center" style="color: #718096; margin-bottom: 0; margin-top: 1.5rem;">Already have an account? <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=auth/login" class="text-decoration-none" style="color: #2c5282; font-weight: 700;">Sign in</a></p>
             </div>
         </div>
     </div>
