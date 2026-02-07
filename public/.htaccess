@@ -1,0 +1,6 @@
+RewriteEngine On
+# access to existing files and directories is allowed
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#send all requests to index.php
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
