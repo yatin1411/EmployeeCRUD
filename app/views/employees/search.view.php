@@ -4,7 +4,7 @@
     <div class="col-md-8 offset-md-2">
         <div class="mb-5">
             <h2>Search Employees</h2>
-            <p class="text-muted" style="font-size: 0.95rem;">Logged in as: <strong><?php echo htmlspecialchars(getCurrentUser()); ?></strong></p>
+            <p class="text-muted text-small">Logged in as: <strong><?php echo htmlspecialchars(getCurrentUser()); ?></strong></p>
         </div>
 
         <div class="card border-0 mb-4">
@@ -18,7 +18,11 @@
             </div>
         </div>
 
-        <?php if (!empty($keyword) && empty($employees)): ?>
+        <?php if (!empty($error)): ?>
+            <div class="alert alert-warning">
+                <i class="bi bi-exclamation-triangle"></i> <?php echo htmlspecialchars($error); ?>
+            </div>
+        <?php elseif (!empty($keyword) && empty($employees)): ?>
             <div class="alert alert-info">
                 <i class="bi bi-info-circle"></i> No employees found matching "<?php echo htmlspecialchars($keyword); ?>"
             </div>
@@ -29,8 +33,9 @@
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover mb-0">
-                        <thead style="background: linear-gradient(90deg, #2c5282 0%, #3b68e0 100%); color: white;">
+                        <thead class="table-header-gradient">
                             <tr>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Position</th>
@@ -41,13 +46,16 @@
                         <tbody>
                             <?php foreach ($employees as $employee): ?>
                                 <tr>
+                                    <td><?php echo htmlspecialchars($employee['id']); ?></td>
                                     <td><?php echo htmlspecialchars($employee['name']); ?></td>
                                     <td><?php echo htmlspecialchars($employee['email']); ?></td>
                                     <td><?php echo htmlspecialchars($employee['position']); ?></td>
                                     <td><?php echo number_format($employee['salary'], 2); ?></td>
                                     <td>
-                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/edit&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-primary btn-custom">Edit</a>
-                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/delete&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-danger btn-custom" onclick="return confirm('Are you sure?')">Delete</a>
+                                        <div class="table-actions">
+                                            <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/edit&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-primary btn-custom">Edit</a>
+                                            <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/delete&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-danger btn-custom" onclick="return confirm('Are you sure?')">Delete</a>
+                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

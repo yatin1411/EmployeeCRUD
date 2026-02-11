@@ -3,18 +3,18 @@
 <div class="row">
     <div class="col-md-6 offset-md-3">
         <h2 class="mb-3">Add New Employee</h2>
-        <p class="text-muted mb-5" style="font-size: 0.95rem;">Logged in as: <strong><?php echo htmlspecialchars(getCurrentUser()); ?></strong></p>
+        <p class="text-muted mb-5 text-small">Logged in as: <strong><?php echo htmlspecialchars(getCurrentUser()); ?></strong></p>
 
-        <div class="card border-0" style="box-shadow: 0 8px 24px rgba(26, 54, 93, 0.12);">
+        <div class="card border-0 shadow-card">
             <div class="card-body">
                 <form method="POST">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Full Name <span style="color: #dc2626;">*</span></label>
+                        <label for="name" class="form-label">Full Name <span class="required-field">*</span></label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Enter employee name" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email Address <span style="color: #dc2626;">*</span></label>
+                        <label for="email" class="form-label">Email Address <span class="required-field">*</span></label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com" required>
                     </div>
 

@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between align-items-center mb-5">
             <div>
                 <h2 class="mb-2">Employee Directory</h2>
-                <p class="text-muted mb-0" style="font-size: 0.95rem;">Logged in as: <strong><?php echo htmlspecialchars($user ?? getCurrentUser()); ?></strong></p>
+                <p class="text-muted mb-0 text-small">Logged in as: <strong><?php echo htmlspecialchars($user ?? getCurrentUser()); ?></strong></p>
             </div>
             <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/add" class="btn btn-primary btn-custom">
                 Add Employee
@@ -23,12 +23,12 @@
         </div>
 
         <?php if (empty($employees)): ?>
-            <div class="alert alert-info">No employees found. <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/add" style="color: #2c5282; font-weight: 700;">Add one now</a></div>
+            <div class="alert alert-info">No employees found. <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/add" class="text-primary-link">Add one now</a></div>
         <?php else: ?>
             <div class="card">
                 <div class="card-body table-responsive">
                     <table class="table table-striped table-hover table-custom">
-                        <thead style="background: linear-gradient(90deg, #2c5282 0%, #3b68e0 100%); color: white;">
+                        <thead class="table-header-gradient">
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
@@ -47,8 +47,10 @@
                                     <td><?php echo htmlspecialchars($employee['position']); ?></td>
                                     <td><?php echo number_format($employee['salary'], 2); ?></td>
                                     <td>
-                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/edit&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-warning btn-custom">Edit</a>
-                                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/delete&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-danger btn-custom" onclick="return confirm('Are you sure?')">Delete</a>
+                                        <div class="table-actions">
+                                            <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/edit&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-warning btn-custom">Edit</a>
+                                            <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/EmployeeCRUD/public/index.php?url=employees/delete&id=<?php echo $employee['id']; ?>" class="btn btn-sm btn-danger btn-custom" onclick="return confirm('Are you sure?')">Delete</a>
+                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

@@ -91,11 +91,16 @@
         public function search() {
             $keyword = $_GET['keyword'] ?? '';
             $employees = [];
+            $error = '';
 
-            if (!empty($keyword)) {
-                $employees = $this->model->searchEmployees($keyword);
+            if (isset($_GET['keyword'])) {
+                if (empty($keyword)) {
+                    $error = 'Please enter a keyword to search!';
+                } else {
+                    $employees = $this->model->searchEmployees($keyword);
+                }
             }
 
-            $this->view('employees/search', ['employees' => $employees, 'keyword' => $keyword]);
+            $this->view('employees/search', ['employees' => $employees, 'keyword' => $keyword, 'error' => $error]);
         }
     }
