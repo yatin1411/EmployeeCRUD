@@ -3,7 +3,7 @@
         public function view($name, $data = []) {
             $filename="../app/views/".$name.".view.php";
             if(file_exists($filename)){
-                extract($data);
+                extract($data); //converts keys to var
                 require $filename;       
             }
             else{
