@@ -10,5 +10,3 @@
         </a>
     </div>
 </div>
-
-<?php include "../app/views/footer.html"; ?>

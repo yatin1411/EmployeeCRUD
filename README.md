@@ -98,7 +98,6 @@ EmployeeCRUD/
 │   ├── views/                 ← HTML templates
 │   │   ├── layout.html        ← Main wrapper template
 │   │   ├── home.view.php      ← Home page HTML
-│   │   ├── footer.html        ← Footer template
 │   │   ├── _404.view.php      ← Error page
 │   │   ├── auth/
 │   │   │   ├── login.view.php
